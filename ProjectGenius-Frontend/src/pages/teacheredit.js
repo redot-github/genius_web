@@ -245,9 +245,7 @@ const TeacherEdit = () => {
             if (status === true) {
                 setFormValue(result)
                 setData(result)
-            } else if (status === false) {
-                // navigate('/students')
-            }
+            } 
         } catch (err) {
             console.log(err, '--err')
         }
@@ -345,8 +343,8 @@ const TeacherEdit = () => {
                                         <span>{getPhotoName()}</span>
                                     )}
                                 </label>
-                                {typeof teacherphoto === 'object' && <img src={URL.createObjectURL(teacherphoto)} style={{ 'width': '60px','marginTop': "5px"  }} />}
-                                {typeof teacherphoto === 'string' && <img src={teacherphoto} style={{ 'width': '60px','marginTop': "5px" }} />}
+                                {typeof teacherphoto === 'object' && <img src={URL.createObjectURL(teacherphoto)} style={{ 'width': '60px','marginTop': "5px"  }} alt='' />}
+                                {typeof teacherphoto === 'string' && <img src={teacherphoto} style={{ 'width': '60px','marginTop': "5px" }} alt='' />}
                                 <span className='text-error'>{fileErrorMsg}</span>
                             </div>
                         </form>
@@ -541,7 +539,7 @@ const TeacherEdit = () => {
                 <div className="right-content">
                     {renderForm()}
                     <div className="btnn">
-                        {currentForm == 2 && (
+                        {currentForm === 2 && (
                             <button className='previous'
                                 onClick={() => {
                                     handlePreClick();
@@ -559,7 +557,7 @@ const TeacherEdit = () => {
                         )}
                     </div>
                     <div className="sub-btnn">
-                        {currentForm == 3 && (
+                        {currentForm === 3 && (
                             <button
                                 onClick={() => {
                                     handlePreClick();

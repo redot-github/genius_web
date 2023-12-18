@@ -111,9 +111,9 @@ const Verify = () => {
   return (
     <div className="container2">
       <div className="left-content-2">
-        <img id="ellipse-2" src="images/Ellipse 17.svg" />
-        <img id="ell-2" src="images/Ellipse 17.png" />
-        <img className="kids2" src="images/Kids Studying from Home-pana 1.svg" />
+        <img id="ellipse-2" src="images/Ellipse 17.svg" alt='' />
+        <img id="ell-2" src="images/Ellipse 17.png" alt='' />
+        <img className="kids2" src="images/Kids Studying from Home-pana 1.svg" alt='' />
       </div>
       <div className="right-content-2">
         <div className="otp-box">

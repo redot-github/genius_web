@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 //import actions
 import {  teacherAadhar } from '../../actions/adminAction';
 
@@ -44,7 +44,7 @@ const TeacherContact = (props) => {
 
     const getData =async ()=>{
      let {status,result} = await teacherAadhar()
-     if(status == true){
+     if(status === true){
       setData(result)
      }
     }

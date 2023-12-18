@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faHistory, faUpload } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft,faUpload } from '@fortawesome/free-solid-svg-icons';
 
 const TeacherHistory = (props) => {
     const { formValue, setFormValue, handlePreClick, handleSubmit} = props

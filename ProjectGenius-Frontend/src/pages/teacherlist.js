@@ -123,13 +123,6 @@ const TeacherList = () => {
     }
   };
 
-  const handleHoliday = () => {
-    const holidayData = selectedData.map((each) => ({
-      ...each,
-      status: "Holiday",
-    }));
-    setAttendance((prev) => ({ ...prev, attendance: [...holidayData] }));
-  };
 
   const handleDeselect = () => {
     setAttendance(initialAttendance);
@@ -310,7 +303,7 @@ const TeacherList = () => {
             </div>
           </div>
         </div>
-        <div className="tchr-table" onclick="hidefilt();">
+        <div className="tchr-table">
           {provideAttendance ? (
             <>
               <div className="multi-select-control">
@@ -378,7 +371,7 @@ const TeacherList = () => {
                       console.log(ViewAttendance, "attenstatus");
                       console.log(ViewStatus, "ansss");
                       return (
-                        <tr className="tchr-row" onclick="infos()" key={key}>
+                        <tr className="tchr-row" key={key}>
                           <td>
                             <input
                               type="checkbox"
@@ -536,7 +529,7 @@ const TeacherList = () => {
                       ? `${isClassTeacher.className}-${isClassTeacher.section}`
                       : "-";
                     return (
-                      <tr className="tchr-row" onclick="infos()" key={key}>
+                      <tr className="tchr-row"  key={key}>
                         <td className="teacherprofile">
                           <img
                             src={`${IMAGE_URL}/${item.teacherphoto}`}

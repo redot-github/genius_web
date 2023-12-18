@@ -9,7 +9,7 @@ import { getSingleteacher,createteacherschedule,getfixedschedule } from "../acti
 import toastAlert from "../lib/toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
-import AlertConfirm, { Button } from "react-alert-confirm";
+import AlertConfirm from "react-alert-confirm";
 
 
 const initialTimeTable = [
@@ -457,7 +457,7 @@ useEffect(() => {
       schedule: timeTable,
     };
     try {
-      const { status, message,result} = await createteacherschedule(data);
+      const { status, message } = await createteacherschedule(data);
       if (status === true) {
             setTimeTable(initialTimeTable)
             toastAlert('success',message)

@@ -10,12 +10,12 @@ const PaymentFailure = () => {
     <div className="failure">
       <p>Oops! Something Went Wrong</p>
       <p className="fail">
-        <img src="images/Vector (2).png" />
+        <img src="images/Vector (2).png" alt='' />
       </p>
       <h2>Payment Error</h2>
     </div>
     <Link to='/feecollection' href="#">
-      Retry Payment <img src="images/blue-side.png" />
+      Retry Payment <img src="images/blue-side.png" alt='' />
     </Link>
   </div>
 </div>

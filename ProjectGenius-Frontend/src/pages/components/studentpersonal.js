@@ -4,7 +4,7 @@ import { faUpload, faUser } from '@fortawesome/free-solid-svg-icons';
 import moment from "moment-timezone";
 
 const AdmissionFormOne = (props) => {
-  const { formValue, setFormValue, handleNextClick, errors } = props
+  const { formValue, setFormValue, handleNextClick } = props
   //Destructuring of formValue
   const { firstName, dob, fathername, placeofbirth, lastName, age, mothername, photo } = formValue
   //Ensure next button disable
@@ -122,7 +122,7 @@ const AdmissionFormOne = (props) => {
               <div style={{ marginRight: '10px' }}><FontAwesomeIcon icon={faUpload} /></div>
               {photo ? (<span>{photo.name}</span>) : (<span>Drag and Drop or Browse Files</span>)}
             </label>
-            {photo && <img src={URL.createObjectURL(photo)} style={{ 'width': '70px', 'marginTop': "5px" }} />}
+            {photo && <img src={URL.createObjectURL(photo)} style={{ 'width': '70px', 'marginTop': "5px" }} alt='' />}
             <span className='text-error'>{fileErrorMsg}</span>
             {photo === "" && fileErrorMsg === "" && <span className='text-error'>*No file uploaded</span>}
           </div>

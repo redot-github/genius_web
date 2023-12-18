@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Sidebar from './components/sidebar';
 //import Actions
-import { findAttendance, findAttendanceForMonth, findschedulefordetails, getSingleteacher } from '../actions/adminAction';
+import { findAttendance,findschedulefordetails, getSingleteacher } from '../actions/adminAction';
 //hooks
 import { useParams } from 'react-router-dom';
 import Attendance from './components/attendance';
@@ -119,7 +119,7 @@ return(
           <div className="left-docs" >
           <div className="doc-profile">
             <div>
-            <img src={data.teacherphoto}/>
+            <img src={data.teacherphoto} alt='' />
             </div>
             <div className="tchr-name">
             <p>{data.name}</p>

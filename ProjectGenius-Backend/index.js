@@ -5,7 +5,6 @@ const cors = require('cors');
 const morgan = require('morgan');
 // Routes
 const adminRoutes =require('./routes/admin.route');
-const teacherRoutes = require('./routes/teacher.route');
 // config
 const config = require('./config');
 const app = express();
@@ -17,7 +16,6 @@ app.use(bodyParser.json())
 app.use(cors())
 app.use(express.static('public'))
 app.use('/admin', adminRoutes);
-app.use('/admin', teacherRoutes);
 
 const mongoConnect = async () => {
   try {

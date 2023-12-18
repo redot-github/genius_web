@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Sidebar from "./components/sidebar";
 //fontawesome pacakage
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEllipsis,
   faMoneyCheck,
   faSchool,
-  faSection,
   faSort,
 } from "@fortawesome/free-solid-svg-icons";
 //react confirm pop-up package
@@ -19,7 +17,9 @@ import { viewStudent, deleteStudent } from "../actions/adminAction";
 import StudentInfo from "./components/StudentInfo";
 //lib
 import toastAlert from "../lib/toast";
-
+//components
+import Sidebar from "./components/sidebar";
+//Material UI components
 import Badge from "@mui/material/Badge";
 import SwitchAccountRounded from "@mui/icons-material/SwitchAccountRounded";
 import CancelIcon from "@mui/icons-material/Cancel";
@@ -45,8 +45,6 @@ const Students = () => {
   const [selectingStudents, setSelectingStudents] = useState(false);
   const [selectAll, setSelectAll] = useState(false);
 
-  //preloader
-
   const handleSectionAllocate = () => {
     const formattedData = data
       .filter((item) => selectedStudents.includes(item._id))
@@ -58,18 +56,18 @@ const Students = () => {
       formattedData,
       sortGrade,
     };
-    navigate('/multi-sectionallocate', {state : {studentData}})
+    navigate('/multi-sectionallocate', { state: { studentData } })
   };
 
   const renderUserView = () => {
     if (loaderView) {
       return (
         <div className="loader-view-container">
-         <div class="spinner-box">
-            <div class="pulse-container">
-              <div class="pulse-bubble pulse-bubble-1"></div>
-              <div class="pulse-bubble pulse-bubble-2"></div>
-              <div class="pulse-bubble pulse-bubble-3"></div>
+          <div className="spinner-box">
+            <div className="pulse-container">
+              <div className="pulse-bubble pulse-bubble-1"></div>
+              <div className="pulse-bubble pulse-bubble-2"></div>
+              <div className="pulse-bubble pulse-bubble-3"></div>
             </div>
           </div>
         </div>
@@ -156,10 +154,10 @@ const Students = () => {
               {data &&
                 data.length > 0 &&
                 studentData.map((item, key) => {
-                   // Check if the studentId is present in any section
-              const sectionForStudent = section.find(sec =>
-                sec.students.some(student => student.studentId === item.studentId)
-              );
+                  // Check if the studentId is present in any section
+                  const sectionForStudent = section.find(sec =>
+                    sec.students.some(student => student.studentId === item.studentId)
+                  );
                   return (
                     <tr className="std-row" key={key}>
                       <td>
@@ -197,8 +195,8 @@ const Students = () => {
                         <span className="grade">{item.admissiongrade}</span>
                       </td>
                       <td>
-                          <span className="grade">{sectionForStudent ? sectionForStudent.section : "-"}</span>
-                        </td>
+                        <span className="grade">{sectionForStudent ? sectionForStudent.section : "-"}</span>
+                      </td>
                       <td>+91{item.contactNumber}</td>
                       <td>{item.doj}</td>
                       <td>
@@ -343,7 +341,7 @@ const Students = () => {
   };
   const getData = async () => {
     try {
-      let { status, result,result2, imageUrl } = await viewStudent();
+      let { status, result, result2, imageUrl } = await viewStudent();
       if (status === true) {
         setLoaderView(false)
         const studentData = await result.filter(each => each.active === 1 && each.name.toLowerCase().includes(userSearchInput.toLowerCase()))
@@ -358,9 +356,6 @@ const Students = () => {
   useEffect(() => {
     getData();
   }, []);
-
-  console.log(data,'---data')
-  console.log(section,'---section')
   //updating grade sorting state
   const handleGradeSort = (event) => {
     if (event.target.value === "") {
@@ -438,9 +433,9 @@ const Students = () => {
           </div>
           <div className="middle-header-right">
             {sortGrade !== "" && (
-                <button type="button" className="allocate-btn-sm" onClick={handleSectionAllocate}>
-                  {`No.of Students ${selectedStudents.length}`} <ArrowRightAltOutlined />
-                </button>
+              <button type="button" className="allocate-btn-sm" onClick={handleSectionAllocate}>
+                {`No.of Students ${selectedStudents.length}`} <ArrowRightAltOutlined />
+              </button>
             )}
             <input
               type="search"

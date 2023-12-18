@@ -28,7 +28,7 @@ const Sidebar = (props) => {
                 background: 'linear-gradient(to right,#fde4cb,#fcfad3)'
               } : null}>
             <div className="menu-bar">
-            {isLinkActive('/newadmission') ? <img src={`${process.env.PUBLIC_URL}/images/file.png`} /> : <img src={`${process.env.PUBLIC_URL}/images/grey-file.png`} />}
+            {isLinkActive('/newadmission') ? <img src={`${process.env.PUBLIC_URL}/images/file.png`}  alt="" /> : <img src={`${process.env.PUBLIC_URL}/images/grey-file.png`}  alt=""/>}
               <NavLink to='/newadmission' className={`mysidebar ${isLinkActive('/newadmission') ? 'activemysidebar' : null}`}>NewAdmission</NavLink>
             </div>
 

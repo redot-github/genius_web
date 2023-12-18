@@ -11,7 +11,7 @@ const FeeComplete = () => {
   <div className="payment-success">
     <div className="success">
       <p style={{ fontSize: 13 }}>Thank You For Your Payment</p>
-      <img src="images/tik.png" />
+      <img src="images/tik.png" alt='' />
       <span>Payment #123RGR231567Y Successful</span>
       <button type="button" className="receipt" onClick={navigate('/students')}>
         Generate Receipt

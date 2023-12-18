@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Sidebar from './components/sidebar';
-import { getTeacherSchedule } from '../actions/adminAction';
 import { useNavigate, useParams } from 'react-router-dom';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+//components
+import Sidebar from './components/sidebar';
+//action
+import { getTeacherSchedule } from '../actions/adminAction';
 
 const TimeTable = () => {
   //states
@@ -167,7 +168,7 @@ const TimeTable = () => {
   const renderAssignSchedule = () => {
     return (
       <div className="assign-schedule">
-        <img src="https://img.freepik.com/free-vector/schedule-concept-illustration_114360-4253.jpg?w=996&t=st=1701086825~exp=1701087425~hmac=c973ff6d8ba2e5e1a4f56b6d2168cd58817a52e3188ec1cf17acd13ca806b10b" />
+        <img src="https://img.freepik.com/free-vector/schedule-concept-illustration_114360-4253.jpg?w=996&t=st=1701086825~exp=1701087425~hmac=c973ff6d8ba2e5e1a4f56b6d2168cd58817a52e3188ec1cf17acd13ca806b10b"  alt=''/>
       </div>
     )
   }

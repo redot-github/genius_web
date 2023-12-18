@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Select from 'react-select';
+//components
 import Sidebar from './components/sidebar';
 import Navbar from './components/navbar';
 //import actions

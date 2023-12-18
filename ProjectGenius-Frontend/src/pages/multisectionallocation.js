@@ -81,7 +81,7 @@ const MultiSectionAllocation = () => {
   useEffect(() => {
     getSection()
   }, [data])
-  console.log(Result, '---Result')
+
   return (
     <div className="fee-collection">
       <Sidebar />

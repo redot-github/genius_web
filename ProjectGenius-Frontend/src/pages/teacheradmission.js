@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './components/sidebar';
 import Navbar from './components/navbar';
@@ -112,7 +112,7 @@ const Teacher = () => {
             formData.append('aadhaarNumber', aadhaarNumber)
             formData.append('currentsalary', currentsalary);
 
-            let { status, message, errors } = await registerTeacher(formData)
+            let { status, message } = await registerTeacher(formData)
             if (status === true) {
 
                 toastAlert('success', message)

@@ -82,5 +82,4 @@ const getData = async () => {
   
   )
 }
-
-export default FeesList
+export default FeesList;

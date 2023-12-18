@@ -5,12 +5,12 @@ const Home = () => {
   return (
     <div className="home">
     <div className="home-head">
-      <img src="images/home-logo.png" />
+      <img src="images/home-logo.png"  alt=''/>
     </div>
     <div className="home-content">
       <div className="left-home">
         <div className="high-school">
-          <img src="images/High School.png" />
+          <img src="images/High School.png"  alt=''/>
         </div>
       </div>
       <div className="right-home">
@@ -34,10 +34,10 @@ const Home = () => {
           <p>Welcome !</p>
         </div>
         <div className="grass">
-            <img src="images/grass.png" />
+            <img src="images/grass.png" alt=''/>
         </div>
         <div className="rain">
-            <img src="images/rain.png" />
+            <img src="images/rain.png" alt='' />
         </div>
       </div>
     </div>

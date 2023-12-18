@@ -337,8 +337,8 @@ const StudentEdit = () => {
                                             <span>{getPhotoName()}</span>
                                         )}
                                     </label>
-                                    {typeof photo === 'object' && <img src={URL.createObjectURL(photo)} style={{ 'width': '60px','marginTop': "5px"  }} />}
-                                    {typeof photo === 'string' && <img src={photo} style={{ 'width': '60px','marginTop': "5px" }} />}
+                                    {typeof photo === 'object' && <img src={URL.createObjectURL(photo)} style={{ 'width': '60px','marginTop': "5px"  }} alt=''/>}
+                                    {typeof photo === 'string' && <img src={photo} style={{ 'width': '60px','marginTop': "5px" }} alt='' />}
                                     <span className='text-error'>{fileErrorMsg}</span>
                                 </div>
                         </form>
